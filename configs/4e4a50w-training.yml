@@ -1,0 +1,93 @@
+name: primal
+
+working-memory:
+  size: 100000
+
+simulator:
+  type: Simulator.BasicSimulator
+  width: 30
+  height: 30
+  num-barriers: 10
+  num-enemies: 4
+  num-allies: 4
+  num-assets: 1
+
+  ally-influence-distance: 4
+  enemy-influence-distance: 4
+
+  costs:
+    normal_movement: 3
+    ally_influence: 1
+    enemy_influence: 13
+    mixed_influence: 6
+    # making the following values too high, so they won't ever be used by A*
+    barrier: 1000000
+    asset: 1000000
+    enemy: 1000000
+    ally: 1000000
+
+trainer:
+  ppo-epochs: 3
+  max-grad-norm: 0.5
+  learning-rate: 2.5e-4
+  mini-batch-size: 32
+  training-size: 2048
+  critic-discount: 0.05
+  valid-discount: 0.5
+  entropy-beta: 0.01
+  asset-visible-window: 21
+  gae-gamma: 0.99
+  gae-lambda: 0.95
+  epsilon: 0.995
+  epsilon-decay: 0.999
+  test-frequency: 100
+
+  rewards:
+    basic-step: -0.3
+    ally-influence-step: -0.1
+    enemy-influence-step: -1
+    mixed-influence-step: -0.8
+
+#    basic-step: -0.03
+#    ally-influence-step: -0.01
+#    enemy-influence-step: -0.1
+#    mixed-influence-step: -0.08
+
+#    basic-step: -0.1
+#    ally-influence-step: 0.1
+#    enemy-influence-step: -1
+#    mixed-influence-step: 0.05
+
+    wall: -1
+    goal: 100
+  network:
+    state-shape: [10, 30, 30]
+    network-shape: [10, 11, 11]           # [layers, height and width of the visible window]
+    goal-shape: [2, 1]
+    number-of-actions: 5                # stick, up, down, left, right
+
+visualization:
+  scale: 15
+  colors:
+    enemy: 255, 0, 0
+    enemy_influence: 255, 100, 100
+    ally: 0, 255, 0
+    ally_influence: 100, 222, 100
+    mixed_influence: 177, 177, 100
+#    asset: 245, 102, 0                  # CLEMSON_ORANGE...ew
+    asset: 39, 206, 216
+    barrier: 0, 0, 0
+    goal: 82, 45, 128
+    blank: 255, 255, 255
+
+state:
+  mappings:
+    blank: 0
+    ally: 1
+    barrier: 2
+    enemy: 3
+    enemy_influence: 4
+    ally_influence: 5
+    mixed_influence: 7
+    asset: 8
+    goal: 9

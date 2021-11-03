@@ -1,0 +1,11 @@
+docker run -it -v /Users/jeffrichley/workspace/primal-tf:/primal-tf tf_agents/core
+
+docker run -p 8888:8888/tcp -it -v /Users/jeffrichley/workspace/primal-tf:/primal-tf tf_agents/core
+cd /primal-tf
+jupyter notebook --ip 0.0.0.0 --no-browser --allow-root
+
+pip install -e primal_env
+
+
+
+needed Xquartz

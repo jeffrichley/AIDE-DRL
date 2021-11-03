@@ -1,0 +1,14 @@
+name: primal
+dependencies:
+  - python=3.8
+  - numpy
+  - matplotlib
+  - tensorflow
+  - tqdm
+  - imageio
+  - pip:
+      - pyyaml
+      - pygame
+      - gym
+      - tf-agents
+      - reverb
