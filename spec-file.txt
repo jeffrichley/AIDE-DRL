@@ -1,0 +1,21 @@
+# This file may be used to create an environment using:
+# $ conda create --name <env> --file <this file>
+# platform: osx-64
+@EXPLICIT
+https://repo.anaconda.com/pkgs/main/osx-64/ca-certificates-2021.9.30-hecd8cb5_1.conda
+https://repo.anaconda.com/pkgs/main/osx-64/libcxx-12.0.0-h2f01273_0.conda
+https://repo.anaconda.com/pkgs/main/noarch/tzdata-2021a-h5d7bf9c_0.conda
+https://repo.anaconda.com/pkgs/main/osx-64/xz-5.2.5-h1de35cc_0.conda
+https://repo.anaconda.com/pkgs/main/osx-64/zlib-1.2.11-h1de35cc_3.conda
+https://repo.anaconda.com/pkgs/main/osx-64/libffi-3.3-hb1e8313_2.conda
+https://repo.anaconda.com/pkgs/main/osx-64/ncurses-6.2-h0a44026_1.conda
+https://repo.anaconda.com/pkgs/main/osx-64/openssl-1.1.1l-h9ed2024_0.conda
+https://repo.anaconda.com/pkgs/main/osx-64/tk-8.6.11-h7bc2e8c_0.conda
+https://repo.anaconda.com/pkgs/main/osx-64/readline-8.1-h9ed2024_0.conda
+https://repo.anaconda.com/pkgs/main/osx-64/sqlite-3.36.0-hce871da_0.conda
+https://repo.anaconda.com/pkgs/main/osx-64/python-3.9.7-h88f2d9e_1.conda
+https://repo.anaconda.com/pkgs/main/osx-64/certifi-2021.10.8-py39hecd8cb5_0.conda
+https://repo.anaconda.com/pkgs/main/noarch/tqdm-4.62.2-pyhd3eb1b0_1.conda
+https://repo.anaconda.com/pkgs/main/noarch/wheel-0.37.0-pyhd3eb1b0_1.conda
+https://repo.anaconda.com/pkgs/main/osx-64/setuptools-58.0.4-py39hecd8cb5_0.conda
+https://repo.anaconda.com/pkgs/main/osx-64/pip-21.2.4-py39hecd8cb5_0.conda
